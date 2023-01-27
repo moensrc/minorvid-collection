@@ -429,6 +429,20 @@ section > a img {
     margin: .75em .5em;
 }
 
+#gallery li section,
+#gallery li .thumb,
+#gallery li a {
+    transition: .25s ease-out;
+}
+
+#gallery li:hover section {
+    background-color: #58c0a2;
+}
+
+#gallery li:hover .thumb {
+    opacity: .7;
+}
+
 #gallery li a:first-of-type {
     background-color: #fbd5dd;
     text-decoration: none;
@@ -440,10 +454,9 @@ section > a img {
     padding: 5px 10px 5px 10px;
 
     position: absolute;
+    z-index: 12;
     bottom: 4.2em;
     right: 2em;
-
-    transition: .25s ease-in;
 }
 
 #gallery li a:first-of-type:hover {
@@ -455,6 +468,8 @@ section > a img {
 #gallery li .thumb {
     max-width: 100%;
     height: auto;
+    position: relative;
+    z-index: 0;
 }
 
 #gallery li section {
@@ -463,6 +478,7 @@ section > a img {
     display: flex;
     flex-direction: column-reverse;
     position: absolute;
+    z-index: 10;
     left: 0;
     bottom: -0.5em;
     right: 0;
